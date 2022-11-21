@@ -1,3 +1,7 @@
+package solutions
+
+import core.Executable
+
 /**
 
 https://leetcode.com/problems/two-sum/
