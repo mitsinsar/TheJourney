@@ -9,7 +9,7 @@ class AddTwoNumbersTest {
     private lateinit var addTwoNumbers: AddTwoNumbers
 
     @BeforeAll
-    fun initTwoSum() {
+    fun initAddTwoNumbers() {
         addTwoNumbers = AddTwoNumbers()
     }
 
