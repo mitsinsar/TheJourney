@@ -7,17 +7,17 @@ Keeps values as Key-Value pair
 
 ## Constructors
 
-HashMap  
-: Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
+**HashMap**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
 
-HashMap(int initialCapacity)  
-: Constructs an empty HashMap with the specified initial capacity and the default load factor (0.75).
+**HashMap(int initialCapacity)**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an empty HashMap with the specified initial capacity and the default load factor (0.75).
 
-HashMap(int initialCapacity, float loadFactor)  
-: Constructs an empty HashMap with the specified initial capacity and load factor.
+**HashMap(int initialCapacity, float loadFactor)**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an empty HashMap with the specified initial capacity and load factor.
 
-HashMap(Map<? extends K,? extends V> m)  
-: Constructs a new HashMap with the same mappings as the specified Map.
+**HashMap(Map<? extends K,? extends V> m)**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new HashMap with the same mappings as the specified Map.
 
 ## Time complexity
 
@@ -86,9 +86,9 @@ compared with the provided key object using the equals API.
 graph LR
 A[0] 
 B[1]  --> C --> D --> E 
-C[Node<Key,Value>] 
-D[Node<Key,Value>] 
-E[Node<Key,Value>] 
+C[Key,Value ] 
+D[Key,Value] 
+E[Key,Value] 
 G[2]
 ```
 
