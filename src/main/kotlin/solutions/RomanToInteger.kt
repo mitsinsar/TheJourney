@@ -66,10 +66,11 @@ class RomanToInteger : Executable<String, Int> {
         var number = 0
 
         args.forEachIndexed { index, char ->
-            if (index + 1 < args.length && romanSymbolMap[char]!! < romanSymbolMap[args[index + 1]]!!) {
-                number -= romanSymbolMap[char]!!
+            val currentNumber = romanSymbolMap[char]!!
+            if (index + 1 < args.length && currentNumber < romanSymbolMap[args[index + 1]]!!) {
+                number -= currentNumber
             } else {
-                number += romanSymbolMap[char]!!
+                number += currentNumber
             }
         }
         return number
