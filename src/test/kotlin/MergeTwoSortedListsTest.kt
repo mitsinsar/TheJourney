@@ -5,7 +5,7 @@ import org.junit.jupiter.api.TestInstance
 import solutions.MergeTwoSortedLists
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class MergeTwoSortedListTest {
+class MergeTwoSortedListsTest {
 
     private lateinit var mergeTwoSortedLists: MergeTwoSortedLists
 
