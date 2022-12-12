@@ -1,6 +1,8 @@
 package solutions
 
 import core.Executable
+import core.ListNode
+import core.ListNode.Companion.createListNodes
 
 /**
 
@@ -23,9 +25,9 @@ Output: [7,0,8]
 Explanation: 342 + 465 = 807.
  */
 
-class AddTwoNumbers : Executable<AddTwoNumbers.AddTwoNumbersArgs, ListNode> {
+class AddTwoNumbers : Executable<AddTwoNumbers.AddTwoNumbersArgs, ListNode<Int>> {
 
-    override fun invoke(args: AddTwoNumbersArgs): ListNode {
+    override fun invoke(args: AddTwoNumbersArgs): ListNode<Int> {
         val nodeList1 = args.l1
         val nodeList2 = args.l2
 
@@ -37,8 +39,8 @@ class AddTwoNumbers : Executable<AddTwoNumbers.AddTwoNumbersArgs, ListNode> {
     }
 
     private fun calculateResultOfNodeSum(
-        nodeList1: ListNode?,
-        nodeList2: ListNode?,
+        nodeList1: ListNode<Int>?,
+        nodeList2: ListNode<Int>?,
         hasCarry: Boolean,
         onResultCalculated: (Int) -> Unit
     ) {
@@ -55,26 +57,13 @@ class AddTwoNumbers : Executable<AddTwoNumbers.AddTwoNumbersArgs, ListNode> {
         }
     }
 
-    private fun getSumOfNodeValues(nodeList1: ListNode?, nodeList2: ListNode?, hasRemainder: Boolean): Int {
-        val result = (nodeList1?.`val` ?: 0) + (nodeList2?.`val` ?: 0)
+    private fun getSumOfNodeValues(nodeList1: ListNode<Int>?, nodeList2: ListNode<Int>?, hasRemainder: Boolean): Int {
+        val result = (nodeList1?.value ?: 0) + (nodeList2?.value ?: 0)
         return result.takeIf { !hasRemainder } ?: (result + 1)
     }
 
     data class AddTwoNumbersArgs(
-        val l1: ListNode,
-        val l2: ListNode
+        val l1: ListNode<Int>,
+        val l2: ListNode<Int>
     )
-
-    companion object {
-        fun createListNodes(nodeValueList: List<Int>): ListNode {
-            val newNodeValueList = nodeValueList.subList(1, nodeValueList.size)
-            return ListNode(nodeValueList[0]).apply {
-                if (newNodeValueList.isNotEmpty()) next = createListNodes(newNodeValueList)
-            }
-        }
-    }
-}
-
-data class ListNode(var `val`: Int) {
-    var next: ListNode? = null
 }
