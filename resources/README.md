@@ -2,11 +2,15 @@
 
 This folder will contain resources that may be helpful in solving/understanding problems.
 
-### [HashMap.md](https://github.com/mitsinsar/TheJourney/blob/master/resources/HashMap.md)
+### [HashMap](https://github.com/mitsinsar/TheJourney/blob/master/resources/HashMap.md)
 
-Contains summary information about HashMap (duh...)
+Summary information about HashMap (duh...)
 
-### [VariableOrNotVariable](https://github.com/mitsinsar/TheJourney/blob/master/resources/VariableOrNotVariable.md)
+### [Variable Or Not Variable](https://github.com/mitsinsar/TheJourney/blob/master/resources/VariableOrNotVariable.md)
 
-Contains a performance comparison between using the data directly from a map or assigning the data to a variable before
-using it. 
+Performance comparison between using the data directly from a map with its key or assigning the data to a variable
+before using it.
+
+### [Boyer-Moore Voting Algorithm](https://github.com/mitsinsar/TheJourney/blob/master/resources/BoyerMooreVotingAlgorithm.md)
+
+Fast and easy way to find the majority element in the list. 
